@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --field-size: 15px;
+    --column-count: 0;
+    --row-count: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    width: calc(var(--column-count) * var(--field-size));
+    height: calc(var(--row-count) * var(--field-size));
+    margin: 30px;
+}
+.container .row div {
+    background-color: lightgrey;
+    width: var(--field-size);
+    height: var(--field-size);
+    outline: .5px solid black;
+    float: left;
+}
+.buttons {
+    width: calc(var(--column-count) * var(--field-size));
+    display: flex;
+    justify-content: center;
+    margin: 0 30px;
+}
+.buttons button {
+    margin: 0 10px 10px 10px;
+    padding: 5px 7px;
+}
